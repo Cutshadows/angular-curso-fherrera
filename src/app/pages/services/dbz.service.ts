@@ -5,7 +5,7 @@ import { Personaje } from 'src/app/interfaces/personaje.interface';
   providedIn: 'root'
 })
 export class DbzService {
-  personajes:Personaje[]=[
+  private _personajes:Personaje[]=[
     {
       nombre:'Gokyu',
       poder:2300
@@ -15,12 +15,21 @@ export class DbzService {
       poder:1400
     }
   ]
+  get personajes():Personaje[]{
+    return [...this._personajes];
+  }
+  
   nuevo:Personaje={
     nombre:'Maestro rochi',
     poder: 1222
   }
+  
   constructor() { 
-    console.log('servicio inicializado')
-
   }
+
+  agegarPersonaje(personaje:Personaje){
+    this._personajes=[...this._personajes, personaje]
+  }
+
+
 }

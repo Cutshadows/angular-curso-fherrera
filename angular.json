@@ -123,6 +123,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "dbz"
+    }
+  },
+  "defaultProject": "dbz",
+  "cli": {
+    "analytics": false
+  }
 }

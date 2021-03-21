@@ -3,5 +3,6 @@
     type="text" 
     class="form-control" 
     placeholder="Buscar gifs..."
-    (keyup)="buscar()">
+    (keyup.enter)="buscar()"
+    #txtBuscar>
 

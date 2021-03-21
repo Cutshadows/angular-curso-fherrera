@@ -1,20 +1,20 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { SlidesCssComponent } from './slides-css.component';
+import { PorRegionComponent } from './por-region.component';
 
-describe('SlidesCssComponent', () => {
-  let component: SlidesCssComponent;
-  let fixture: ComponentFixture<SlidesCssComponent>;
+describe('PorRegionComponent', () => {
+  let component: PorRegionComponent;
+  let fixture: ComponentFixture<PorRegionComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ SlidesCssComponent ]
+      declarations: [ PorRegionComponent ]
     })
     .compileComponents();
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(SlidesCssComponent);
+    fixture = TestBed.createComponent(PorRegionComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

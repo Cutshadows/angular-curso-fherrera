@@ -1,20 +1,20 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { GifsPageComponent } from './gifs-page.component';
+import { PorPaisComponent } from './por-pais.component';
 
-describe('GifsPageComponent', () => {
-  let component: GifsPageComponent;
-  let fixture: ComponentFixture<GifsPageComponent>;
+describe('PorPaisComponent', () => {
+  let component: PorPaisComponent;
+  let fixture: ComponentFixture<PorPaisComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ GifsPageComponent ]
+      declarations: [ PorPaisComponent ]
     })
     .compileComponents();
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(GifsPageComponent);
+    fixture = TestBed.createComponent(PorPaisComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

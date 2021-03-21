@@ -1,12 +1,12 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-gifs-page',
-  templateUrl: './gifs-page.component.html',
+  selector: 'app-menu',
+  templateUrl: './menu.component.html',
   styles: [
   ]
 })
-export class GifsPageComponent implements OnInit {
+export class MenuComponent implements OnInit {
 
   constructor() { }
 

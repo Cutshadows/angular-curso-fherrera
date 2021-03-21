@@ -1,20 +1,20 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { ResultadosComponent } from './resultados.component';
+import { PorCapitalComponent } from './por-capital.component';
 
-describe('ResultadosComponent', () => {
-  let component: ResultadosComponent;
-  let fixture: ComponentFixture<ResultadosComponent>;
+describe('PorCapitalComponent', () => {
+  let component: PorCapitalComponent;
+  let fixture: ComponentFixture<PorCapitalComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ ResultadosComponent ]
+      declarations: [ PorCapitalComponent ]
     })
     .compileComponents();
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(ResultadosComponent);
+    fixture = TestBed.createComponent(PorCapitalComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

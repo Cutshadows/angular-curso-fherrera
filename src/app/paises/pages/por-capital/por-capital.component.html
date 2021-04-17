@@ -1,4 +1,30 @@
 <div class="col">
     <h2>Por Capital</h2>
     <hr>
+    <div class="row">
+        <div class="col">
+            <app-pais-input
+                (onNuevaBusqueda)="buscar($event)"
+                placeholder="Buscar por capital..."
+            ></app-pais-input>
+        </div>
+    </div>
 </div>
+<hr>
+
+<ng-container  *ngIf="hayError;then hayErrorTrue;"></ng-container>
+
+
+<ng-template #hayErrorTrue>
+    <div class="alert alert-danger">
+        No encontramos los terminos ingresados: {{termino}}
+    </div>
+</ng-template>
+
+<ng-container *ngIf="paises.length>0">
+    <div class="row">
+        <div class="col">
+            <app-pais-tabla [paises]="paises"></app-pais-tabla>
+        </div>
+    </div>
+</ng-container>

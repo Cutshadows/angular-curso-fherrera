@@ -3,7 +3,7 @@
     <hr>
     <div class="row">
         <div class="col">
-            <form action=""
+            <!-- <form action=""
                 (ngSubmit)="buscar()"
                 autocomplete="off">
                 <input type="text"
@@ -13,38 +13,34 @@
                     class="form-control"
                 >
 
-            </form>
+            </form> -->
+            <app-pais-input
+                (onNuevaBusqueda)="buscar($event)"
+                (onDebounce)="sugerencias($event)"
+                placeholder="Buscar por pais..."
+            ></app-pais-input>
         </div>
     </div>
 </div>
 <hr>
-<div class="alert alert-danger">
-    No encontramos los terminos ingresados 
-</div>
 
-<div class="row">
-    <div class="col">
-        <table class="table table-hover">
-            <thead>
-                <tr>
-                    <th>#</th>
-                    <th>Bandera</th>
-                    <th>Nombre</th>
-                    <th>Poblacion</th>
-                    <th></th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>1</td>
-                    <td>Bandera</td>
-                    <td>nombre</td>
-                    <td>123123123</td>
-                    <td>
-                        <a href="/pais/cro">Ver...</a>
-                    </td>
-                </tr>
-            </tbody>
-        </table>
+<ng-container  *ngIf="hayError;then hayErrorTrue;"></ng-container>
+
+
+<ng-template #hayErrorTrue>
+    <div class="alert alert-danger">
+        No encontramos los terminos ingresados: {{termino}}
     </div>
-</div>
+</ng-template>
+
+<ng-container *ngIf="paises.length>0">
+    <div class="row">
+        <div class="col">
+            <app-pais-tabla [paises]="paises"></app-pais-tabla>
+        </div>
+    </div>
+</ng-container>
+
+  
+
+

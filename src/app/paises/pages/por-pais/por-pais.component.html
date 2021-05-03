@@ -1,4 +1,5 @@
-<div class="col">
+<div class="col animate__animated animate__fadeIn animate__faster">
+
     <h2>Por Pais</h2>
     <hr>
     <div class="row">
@@ -21,7 +22,18 @@
             ></app-pais-input>
         </div>
     </div>
+
 </div>
+<ul class="list-group">
+    <li *ngFor="let paisSugerido of paisesSugeridos"
+    (click)="buscar(paisSugerido.name)" 
+    class="list-group-item list-group-item-action">
+        <a [routerLink]="['/pais', paisSugerido.alpha2Code]">
+            {{paisSugerido.name}}
+        </a>  
+    </li>
+</ul>
+
 <hr>
 
 <ng-container  *ngIf="hayError;then hayErrorTrue;"></ng-container>

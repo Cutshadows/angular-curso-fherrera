@@ -1,4 +1,4 @@
-<table class="table table-hover">
+<table class="table table-hover ">
     <thead>
         <tr>
             <th>#</th>
@@ -10,7 +10,7 @@
     </thead>
     <tbody>
         <ng-container *ngFor="let pais of paises; let i=index">
-            <tr>
+            <tr class="animate__animated animate__slideInLeft animate__faster">
                 <td>{{i+1}}</td>
                 <td class="col-sm-2">
                     <img class="img-thumbnail" [src]="pais.flag" />

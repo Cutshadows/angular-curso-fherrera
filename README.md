@@ -51,3 +51,16 @@ Profundizar un poco más en los módulos
 Hay más temas en los videos, pero en forma general esto es lo principal por ahora, tengan presente que aunque todo esto es opcional, la mayor parte de aplicaciones de Angular usan en cierto punto cada uno de los temas que están en esta sección, por lo que hay que asegurarnos de comprender bien cada lección.
 
 ### PROBANDO CONTROL DE VERSIONES
+
+
+
+### Clase 116 empieza la seccion de autocompletar sin libreria
+1. ngClass y diferentes formas de manipular clases
+
+2. CSS condicionales
+
+3. Optimizaciones a peticiones HTTP
+
+4. Animaciones de CSS
+
+5. Auto-completado en la búsqueda de países

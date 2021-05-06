@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import {  } from "primeng/api";
 
 @Component({
   selector: 'app-root',
@@ -6,5 +7,20 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'dbz';
+  nombre:string = 'douglas baRraza';
+  valor:number=127789;
+  obj={
+    nombre:'Douglas',
+    apellido:'Barraza'
+  }
+
+
+
+  mostrarNombre(){
+    console.log(this.nombre);
+    console.log(this.valor);
+  }
 }
+
+
+

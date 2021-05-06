@@ -1,9 +1,23 @@
+<!-- <div class="text-layout">
+    <h1>{{ nombre | titlecase}}</h1>
+    <h1>{{ valor | number}}</h1>
+    <h1>{{ obj |json}}</h1>
+</div>
 
-   <div class="row container mt-4">
-       <div class="col-3">
-       </div>
+<div>
+    <p-card 
+    [header]="nombre |titlecase" 
+    subheader="esto es un subjedeer">
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vel earum est nemo cupiditate consequatur itaque saepe temporibus eos corporis fuga reprehenderit, rerum expedita perferendis ut odit minima exercitationem ex hic!</p>
+    </p-card>
+</div>
 
-       <div class="col">
-       </div>
-
-   </div>
+<button pButton 
+type="button" 
+label="cambiar" 
+icon="pi pi-check" 
+iconPos="right"
+class="p-button-help" 
+(click)="mostrarNombre()"></button> -->
+<app-menu></app-menu>
+<router-outlet></router-outlet>

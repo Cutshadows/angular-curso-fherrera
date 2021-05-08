@@ -1,39 +1,34 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
-import { LOCALE_ID, NgModule } from '@angular/core';
+import { NgModule } from '@angular/core';
+import { AppRoutingModule } from './app-routing.module';
+
 
 import { AppComponent } from './app.component';
-import { AppRoutingModule } from './app-routing.module';
-import { SharedModule } from './shared/shared.module';
-import { VentasModule } from './ventas/ventas.module';
 
 
-import localeEs  from "@angular/common/locales/es-CL";
-import localeFr  from "@angular/common/locales/fr";
-import { registerLocaleData } from "@angular/common";
-
-
-
-registerLocaleData(localeEs);
-registerLocaleData(localeFr);
+// import localeEs  from "@angular/common/locales/es-CL";
+// import localeFr  from "@angular/common/locales/fr";
+// import { registerLocaleData } from "@angular/common";
+import { ErrorPagesComponent } from './shared/error-pages/error-pages.component';
+// registerLocaleData(localeEs);
+// registerLocaleData(localeFr);
+// {
+//   provide:LOCALE_ID, useValue:'es-CL'
+// }
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    ErrorPagesComponent
   ],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
     AppRoutingModule,
-    // PrimeNgModule,
-    SharedModule,
-    VentasModule
-    // HttpClientModule,
   ],
-  providers: [{
-    provide:LOCALE_ID, useValue:'es-CL'
-  }],
+  providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

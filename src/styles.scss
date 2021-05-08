@@ -1,9 +1,5 @@
 
 html, body{
-    margin: 10px;
-    background-color: var(--surface-b);
-    font-family: var(--font-family);
+   height: 100%;
 }
-.text-layout{
-    color: var(--text-color);
-}
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }

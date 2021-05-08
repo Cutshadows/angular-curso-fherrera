@@ -1,45 +1,26 @@
-import { NgModule } from "@angular/core";
-import { RouterModule, Routes } from "@angular/router";
+import { NgModule } from '@angular/core';
+import { Routes, RouterModule } from '@angular/router';
+import { ErrorPagesComponent } from './shared/error-pages/error-pages.component';
 
-
-import { BasicosComponent } from './ventas/pages/basicos/basicos.component';
-import { NumerosComponent } from './ventas/pages/numeros/numeros.component';
-import { NoComunesComponent } from './ventas/pages/no-comunes/no-comunes.component';
-import { OrdenarComponent } from './ventas/pages/ordenar/ordenar.component';
 
 
 const routes:Routes=[
-    {
-        path:'',
-        component:BasicosComponent,
-        pathMatch:'full'
-    },
-    {
-        path:'numeros',
-        component:NumerosComponent
-    },
-    {
-        path:'no-comunes',
-        component:NoComunesComponent
-    },
-    {
-        path:'ordenados',
-        component:OrdenarComponent
-    },
-    {
-        path:'**',
-        redirectTo:''
-    }
+  {
+    path:'auth',
+    loadChildren:()=>import('./auth/auth.module').then(m=>m.AuthModule)
+  },
+  {
+    path:'404',
+    component:ErrorPagesComponent
+  },{
+    path:'**',
+    // component:ErrorPagesComponent
+    redirectTo:'404'
+  }
 ]
 
-
 @NgModule({
-    imports:[
-        RouterModule.forRoot(routes),
-    ],
-    exports:[
-        RouterModule
-    ]
+  imports: [RouterModule.forRoot(routes) ],
+  exports:[RouterModule]
 })
-
-export class AppRoutingModule{}
+export class AppRoutingModule { }

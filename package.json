@@ -5,7 +5,7 @@
     "ng": "ng",
     "release": "standard-version",
     "start": "ng serve --port 4200 --ssl -o",
-    "build": "ng build",
+    "build": "ng build --configuration=production",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e"

@@ -7,6 +7,8 @@ import { AppRoutingModule } from './app-routing.module';
 
 import { AppComponent } from './app.component';
 
+import {HttpClientModule} from '@angular/common/http';
+
 
 // import localeEs  from "@angular/common/locales/es-CL";
 // import localeFr  from "@angular/common/locales/fr";
@@ -27,6 +29,7 @@ import { ErrorPagesComponent } from './shared/error-pages/error-pages.component'
     BrowserModule,
     BrowserAnimationsModule,
     AppRoutingModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

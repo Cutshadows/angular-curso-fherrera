@@ -1,1 +1,77 @@
-<p>agregar works!</p>
+<h1>Nuevo heroe <small>{{heroe.superhero}}</small></h1>
+
+<mat-divider></mat-divider>
+
+<div fxLayout="row" 
+        fxLayoutGap="40px" 
+        fxLayout.xs="column">
+        <div fxFlex="50" fxLayout="column">
+            
+            <div fxLayout="row"  
+                fxLayout.xs="column"
+                fxLayoutGap="20px">
+                
+                
+                <mat-form-field fxFelx="100" fxLayout.xs="column">
+                    <mat-label>Super Heroe</mat-label>
+                        <input matInput
+                                type="text"
+                                [(ngModel)]="heroe.superhero"
+                                required>
+                </mat-form-field>
+                <mat-form-field fxFelx="100">
+                    <mat-label>Alter ego</mat-label>
+                        <input matInput
+                                [(ngModel)]="heroe.alter_ego"
+                                type="text"
+                                required>
+                </mat-form-field>
+            </div>
+            
+            <mat-form-field fxFelx="100">
+                <mat-label>Primera aparición</mat-label>
+                    <input matInput
+                            [(ngModel)]="heroe.first_appearance"
+                            type="text"
+                            required>
+            </mat-form-field>
+            <mat-form-field fxFelx="100">
+                <mat-label>Personajes</mat-label>
+                    <input matInput
+                            [(ngModel)]="heroe.characters"
+                            type="text"
+                            required>
+            </mat-form-field>
+            <mat-form-field fxFelx="100">
+                <mat-label>Creador</mat-label>
+                <mat-select 
+                    [(ngModel)]="heroe.publisher" 
+                    required>
+                        <mat-option *ngFor="let publisher of publishers" 
+                            [value]="publisher.id">
+                            {{publisher.desc}}
+                        </mat-option>
+                </mat-select>
+            </mat-form-field>
+            <mat-form-field fxFelx="100">
+                <mat-label>Fotos Url</mat-label>
+                    <input matInput
+                            [(ngModel)]="heroe.alt_img"
+                            type="url"
+                            required>
+            </mat-form-field>
+
+            <br>
+
+            <button mat-raised-button 
+                (click)="guardar()"    
+                color="warn">
+                <mat-icon>edit</mat-icon>
+                Guardar
+            </button>
+        </div>
+        <div fxFlex="50">
+            <img [src]="heroe | imagen" >
+        </div>
+
+</div>

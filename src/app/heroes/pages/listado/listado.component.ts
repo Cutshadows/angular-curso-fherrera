@@ -1,16 +1,11 @@
 import { Component, OnInit } from '@angular/core';
 import { HeroesService } from 'src/app/heroes/services/heroes.service';
-import { Heroe } from '../../interfaces/heroe.interface';
+import { Heroe } from 'src/app/heroes/interfaces/heroe.interface';
 
 @Component({
   selector: 'app-listado',
   templateUrl: './listado.component.html',
-  styles: [`
-  mat-card{
-    margin-top:20px;
-  } 
-
-  `
+  styles: [
   ]
 })
 export class ListadoComponent implements OnInit {

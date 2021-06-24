@@ -9,7 +9,7 @@
           
         </mat-toolbar>
         <mat-nav-list>
-            <a routerLink="./listados"
+            <a routerLink="./listado"
                 mat-list-item
                 (click)="sidenav.toggle()">
                 <mat-icon mat-list-icon>label</mat-icon>
@@ -35,7 +35,8 @@
             <mat-icon>menu</mat-icon>
         </button>
         <span class="spacer"></span>
-        <button mat-button >
+        <button mat-button 
+            (click)="logout()">
             Logout
         </button>
     </mat-toolbar>

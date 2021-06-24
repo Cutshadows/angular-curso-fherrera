@@ -9,6 +9,8 @@ import {MatCardModule} from '@angular/material/card';
 import {MatSelectModule} from '@angular/material/select';
 import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
 import {MatGridListModule} from '@angular/material/grid-list';
+import {MatSnackBarModule} from '@angular/material/snack-bar';
+import {MatDialogModule} from '@angular/material/dialog';
 import {MatAutocompleteModule} from '@angular/material/autocomplete';
 
 import {MatInputModule} from '@angular/material/input';
@@ -25,6 +27,7 @@ import {MatInputModule} from '@angular/material/input';
     MatAutocompleteModule,
     MatButtonModule,
     MatCardModule,
+    MatDialogModule,
     MatFormFieldModule,
     MatIconModule,
     MatInputModule,
@@ -33,7 +36,8 @@ import {MatInputModule} from '@angular/material/input';
     MatToolbarModule,
     MatProgressSpinnerModule,
     MatGridListModule,
-    MatSelectModule
+    MatSelectModule,
+    MatSnackBarModule
   ]
 })
 export class MaterialModule { }
